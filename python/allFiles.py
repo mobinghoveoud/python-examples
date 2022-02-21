@@ -20,7 +20,7 @@ path = os.path.abspath(".")
 allFile = getFiles(path)
 
 os.chdir(path)
-f = open("index.txt", "a")
-for file in allFile:
-    f.write(file + "\n")
-f.close()
+# this way is more ram friendly. 
+with open("index.txt", "a") as f:
+    for file in allFile:
+        f.write(file + "\n")
