@@ -10,7 +10,7 @@ def format(text):
 
     match = re.search("_(.*)_", text)
     if re.search("_.*_", text):
-        return f"<i>{match.group(1)}</i>"
+        return f"<u>{match.group(1)}</u>"
 
     return text
 
